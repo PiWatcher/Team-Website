@@ -10,19 +10,20 @@ body{
     border-radius: 25%;
 }
 
-.nav-item {
-    font-size: 20px;
-    margin-right: 25px;
-    text-align: right;
+#logo-text{
+    font-size: 1.8pc;
+    color: white;
 }
 
-.nav-link{
-    color: gray;
+.nav-item {
+    font-size: 1.5pc;
+    margin-right: 25px;
+    text-align: right;
+
 }
 
 .nav-link:hover{
-    background-color: azure;
-    color:black;
+    background-color: gray;
 }
 
 .navbar-no-scroll{
@@ -32,4 +33,35 @@ body{
 .navbar-after-scroll{
     transition-duration: 0.5s;
     background-color: black;
-    }
+}
+
+.background-image {
+    position: relative;
+    width: 100vw;
+    height: 100vw;
+}
+
+.team-overlay {
+    position:absolute;
+    top: 12%;
+    bottom: auto;
+    left: 35%;
+    right: auto;
+    padding: 10px;
+}
+
+#team-name {
+    font-size: 6vw;
+    color: white;
+    text-shadow: 4px 4px black;
+}
+
+.team-name-no-scroll{
+    transition-duration: 0.5s;
+    opacity: 100%;
+}
+
+.team-name-after-scroll{
+    transition-duration: 0.25s;
+    opacity: 0%;
+}

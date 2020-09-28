@@ -27,8 +27,14 @@
         $(window).scroll(function () {
           if ($(this).scrollTop() > 75) {
             $('#nav').removeClass('navbar-no-scroll').addClass('navbar-after-scroll');
+            $('#team-name').removeClass('team-name-no-scroll').addClass('team-name-after-scroll');
+            $('#logo-text').html("PiWatcher");
+            $('#nav').removeClass('navbar-light').addClass('navbar-dark');
           } else {
             $('#nav').removeClass('navbar-after-scroll').addClass('navbar-no-scroll');
+            $('#team-name').removeClass('team-name-after-scroll').addClass('team-name-no-scroll');
+            $('#logo-text').html("")
+            $('#nav').removeClass('navbar-dark').addClass('navbar-light');
           }
         });
       });
@@ -38,12 +44,13 @@
 
   <body>
     <!-- Navbar -->
-    <nav id="nav" class="navbar navbar fixed-top navbar-expand-lg" role="navigation">
+    <nav id="nav" class="navbar navbar fixed-top navbar-expand-lg navbar-light" role="navigation">
 
       <!-- Logo and team name -->
       <div class="logo">
         <a class="navbar-brand" href="./index.html">
-          <img src='res/images/logo.png' id="logo-icon" class="img-fluid" width="60" height="60" alt="PiWatcher Logo">
+          <img src='res/images/logo.png' id="logo-icon" width="60" height="60" alt="PiWatcher Logo">
+          <span class="align-middle" id="logo-text"></span>
         </a>
       </div>
       
@@ -76,101 +83,121 @@
     </nav>
 
 
-    <!-- NAU Image-->
-    <div class="home-image">
-      <img class="img-fluid" src="./res/images/NAU_Campus.jpg" id="campus-image">
-    </div>
-
+    <!-- NAU image with team name-->
+      <div class="background-image">
+        <img src="./res/images/NAU_Campus.jpg" class="img-fluid" id="campus-image">
+        <div class="team-overlay">
+          <span id="team-name">PiWatcher</span>
+        </div>
+    
 
     <!-- Card row of project overview -->
-    <div class="row mt-4 justify-content-center">
+    <div class="container-fluid">
+      <div class="row mt-4 justify-content-center">
 
-      <!-- Card 1 -->
-      <div class="card m-5 p-3 shadow-sm" style="width: 700px;">
-        <div class="card-body">
-          <h4 class="card-title text-center">COVID-19 and Our Project</h4>
-          <p class="card-text">
-            The COVID-19 pandemic has accelerated the use of IoT devices within businesses. Disease mitigation 
-            strategies have opened the door to devices multitasking between health safety and business resource management.
-            The COVID-19 pandemic has accelerated the use of IoT devices within businesses. Disease mitigation 
-            strategies have opened the door to devices multitasking between health safety and business resource management.
-            The COVID-19 pandemic has accelerated the use of IoT devices within businesses. Disease mitigation 
-            strategies have opened the door to devices multitasking between health safety and business resource management.
-          </p>
+        <!-- Card 1 -->
+        <div class="card m-4 p-4 col-sm-9 col-lg-3 shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title text-center">COVID-19 and Our Project</h4>
+            <p class="card-text">
+              The COVID-19 pandemic has accelerated the use of IoT devices within businesses. Disease mitigation 
+              strategies have opened the door to devices multitasking between health safety and business resource management.
+              The COVID-19 pandemic has accelerated the use of IoT devices within businesses. Disease mitigation 
+              strategies have opened the door to devices multitasking between health safety and business resource management.
+              The COVID-19 pandemic has accelerated the use of IoT devices within businesses. Disease mitigation 
+              strategies have opened the door to devices multitasking between health safety and business resource management.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card m-4 p-4 col-sm-9 col-lg-6 shadow-sm">
+          <div class="card-body" style>
+            <h4 class="card-title text-center">COVID-19 and Our Project</h4>
+            <p class="card-text">
+              The COVID-19 pandemic has accelerated the use of IoT devices within businesses. Disease mitigation 
+              strategies have opened the door to devices multitasking between health safety and business resource management.
+              The COVID-19 pandemic has accelerated the use of IoT devices within businesses. Disease mitigation 
+              strategies have opened the door to devices multitasking between health safety and business resource management.
+              The COVID-19 pandemic has accelerated the use of IoT devices within businesses. Disease mitigation 
+              strategies have opened the door to devices multitasking between health safety and business resource management.
+            </p>
+          </div>
         </div>
       </div>
-
-      <!-- Card 2 -->
-      <div class="card m-5 p-3 shadow-sm" style="width: 700px;">
-        <div class="card-body">
-          <h4 class="card-title text-center">COVID-19 and Our Project</h4>
-          <p class="card-text">
-            The COVID-19 pandemic has accelerated the use of IoT devices within businesses. Disease mitigation 
-            strategies have opened the door to devices multitasking between health safety and business resource management.
-            The COVID-19 pandemic has accelerated the use of IoT devices within businesses. Disease mitigation 
-            strategies have opened the door to devices multitasking between health safety and business resource management.
-            The COVID-19 pandemic has accelerated the use of IoT devices within businesses. Disease mitigation 
-            strategies have opened the door to devices multitasking between health safety and business resource management.
-          </p>
-        </div>
-      </div>
-
     </div>
-
 
   
     <!--Team members row-->
 
     <div class="m-5 text-center">
-      <h1>Meet Our Team</h1>
+      <h1>Our Team</h1>
     </div>
   
-    <!-- Seth's card -->
-    <div class="row mt-4 justify-content-center">
-
-      <div class="card p-3 m-4 shadow-sm text-center" id="team-member" style="width:300px">
-        <img class="card-img-top rounded-circle img-fluid" src="res/images/Burchfield_Headshot.jpeg" alt="Seth Burchfield">
-
-        <div class="card-body">
-          <h4 class="card-title">Seth Burchfield</h4>
-          <p class="card-text">snb284@nau.edu</p>
-          <p class="card-text">Developer, Editor, Release Manager</p>
-        </div>
-      </div>
-
-      <!-- Champ's card -->
-      <div class="card p-3 m-4 shadow-sm text-center" id="team-member" style="width: 300px;">
-        <img class="card-img-top rounded-circle img-fluid" src="res/images/Foronda_Headshot.jpeg" alt="Champ Foronda">
-
-        <div class="card-body">
-          <h4 class="card-title">Champ Foronda</h4>
-          <p class="card-text">cf654@nau.edu</p>
-          <p class="card-text"> Team Lead, Customer Communicator, Developer</p>
-        </div>
-      </div>
-
     
-      <!-- Joshua's card -->
-      <div class="card p-3 m-4 shadow-sm text-center" id="team-member" style="width: 300px;">
-        <img class="card-img-top rounded-circle img-fluid" src="res/images/Holguin_Headshot.jpg" alt="Joshua Holguin">
+    <div class="container-fluid">
+      <div class="row m-4 justify-content-center">
 
-        <div class="card-body">
-          <h4 class="card-title">Joshua Holguin</h4>
-          <p class="card-text">jmh824@nau.edu</p>
-          <p class="card-text">Developer, Editor, Release Manager</p>
+        <!-- Seth's card -->
+        <div class="col-sm-5 col-lg-3">
+          <div class="card p-4 m-3 shadow-sm text-center" >
+            <img class="card-img-top rounded-circle img-fluid" src="res/images/Burchfield_Headshot.jpeg" alt="Seth Burchfield">
+    
+            <div class="card-body">
+              <h4 class="card-title">Seth Burchfield</h4>
+              <p class="card-text">snb284@nau.edu</p>
+              <p class="card-text"><b>Editor</b></p>
+              <p class="card-text"><b>Release Manager</b></p>
+              <p class="card-text"><b>Developer</b></p>
+            </div>
+          </div>
         </div>
-      </div>
+      
+        <!-- Champ's card -->
+        <div class="col-sm-5 col-lg-3">
+          <div class="card p-4 m-3 shadow-sm text-center">
+            <img class="card-img-top rounded-circle img-fluid" src="res/images/Foronda_Headshot.jpeg" alt="Champ Foronda">
 
-
-      <!-- Brigham's card -->
-      <div class="card p-3 m-4 shadow-sm text-center" id="team-member" style="width: 300px;">
-        <img class="card-img-top rounded-circle img-fluid" src="res/images/Ray_Headshot.jpg" alt="Brigham Ray">
-
-        <div class="card-body">
-          <h4 class="card-title">Brigham Ray</h4>
-          <p class="card-text">ber98@nau.edu</p>
-          <p class="card-text">Customer Communicator, Developer, Recorder</p>
+            <div class="card-body">
+              <h4 class="card-title">Champ Foronda</h4>
+              <p class="card-text">cf654@nau.edu</p>
+              <p class="card-text"><b>Team Lead</b></p>
+              <p class="card-text"><b>Customer Communicator</b></p>
+              <p class="card-text"><b>Developer</b></p>
+            </div>
+          </div>
         </div>
+    
+        <!-- Joshua's card -->
+        <div class="col-sm-5 col-lg-3">
+          <div class="card p-4 m-3 shadow-sm text-center">
+            <img class="card-img-top rounded-circle img-fluid" src="res/images/Holguin_Headshot.jpeg" alt="Joshua Holguin">
+
+            <div class="card-body">
+              <h4 class="card-title">Joshua Holguin</h4>
+              <p class="card-text">jmh824@nau.edu</p>
+              <p class="card-text"><b>Editor</b></p>
+              <p class="card-text"><b>Release Manager</b></p>
+              <p class="card-text"><b>Developer</b></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Brigham's card -->
+        <div class="col-sm-5 col-lg-3">
+          <div class="card p-4 m-3 shadow-sm text-center">
+            <img class="card-img-top rounded-circle img-fluid" src="res/images/Ray_Headshot.jpeg" alt="Brigham Ray">
+            <div class="card-body">
+              <h4 class="card-title">Brigham Ray</h4>
+              <p class="card-text">ber98@nau.edu</p>
+              <p class="card-text"><b>Recorder</b></p>
+              <p class="card-text"><b>Customer Communicator</b></p>
+              <p class="card-text"><b>Developer</b></p>
+              
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </body>
