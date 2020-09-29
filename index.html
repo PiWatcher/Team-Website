@@ -18,11 +18,21 @@
    <!-- Bootstrap javascript (Version 4.5.2) -->
    <script src="./res/js/bootstrap.bundle.js"></script>
  </head>
-  </head>
 
   <body>
+
+    <!-- Updates PDF viewer to selected document -->
+    <script>
+      function changePDF(pdf_name) {
+        $("#pdf").attr({
+          data: "./res/docs/".concat(pdf_name) 
+        });
+      }
+    </script>
+
+
     <!-- Navbar -->
-    <nav id="nav" class="navbar navbar static-top navbar-expand-lg bg-dark navbar-dark" role="navigation">
+    <nav id="nav" class="navbar navbar static-top navbar-expand-lg bg-dark" role="navigation">
 
       <!-- Logo and team name -->
       <div class="logo">
@@ -34,7 +44,7 @@
       
       <!-- Navbar hamburger dropdown -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
+        <img src="./res/icons/hamburger_menu.svg" id="hamburger-icon" alt="hamburger-icon">
       </button>
 
       <!-- Navbar links-->
@@ -59,6 +69,37 @@
           </ul>
         </class>
     </nav>
-  </body>
 
+    <!-- Document selection / document row-->
+    <div class="container-fluid">
+      <div class="row">
+
+        <!-- Document selection column-->
+        <table class="col-sm-12 col-lg-3 table table-dark table-hover">
+          <thead class="text-center" style="font-size: 2pc;">
+            <tr>
+              <th scope="col">Documents</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td onclick="changePDF('Team_Standards.pdf');">Team Standards</td>
+            </tr>
+            <tr>
+              <td onclick="changePDF('Team_Inventory.pdf');">Team Inventory</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Document PDF viewer -->
+        <div class="col-sm-12 col-lg-9 mt-4">
+          <div class="container-fluid">
+            <object id="pdf" data="./res/docs/Team_Standards.pdf" type= "application/pdf" />
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+  </body>
 </html>

@@ -1,4 +1,5 @@
 body{
+    height: 100%;
     background-color: azure;
 }
 
@@ -19,9 +20,21 @@ body{
     font-size: 1.5pc;
     margin-right: 25px;
     text-align: right;
+}
 
+.nav-link{
+    color: white
 }
 
 .nav-link:hover{
-    background-color: gray;
+    color: gray;
+}
+
+#doc-text {
+    font-size: 2pc;
+}
+
+#pdf {
+    height: 100vh;
+    width: 100%;
 }
