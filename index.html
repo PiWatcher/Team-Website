@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Team PiWatcher</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap stylesheet (Version 4.5.2) -->
+    <link rel="stylesheet" type = "text/css" = href="/res/css/bootstrap.css">
+
+    <!-- Custom stylesheet to override bootstrap -->
+    <link rel="stylesheet" type = "text/css" href="/res/css/home-page-style.css">
+
+    <!-- jQuery javascript (Version 3.5.1) -->
+    <script src="/res/js/jquery-3.5.1.min.js"></script>
+
+    <!-- Bootstrap javascript (Version 4.5.2) -->
+    <script src="/res/js/bootstrap.bundle.js"></script>
+  </head>
+
+
+  <!-- Navbar fade in/out during scroll action -->
+  <script>
+    $(document).ready(function(){
+      $(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 75) {
+            $('#nav').removeClass('navbar-no-scroll').addClass('navbar-after-scroll');
+            $('#team-name').removeClass('team-name-no-scroll').addClass('team-name-after-scroll');
+            $('#logo-text').html("PiWatcher");
+
+          } else {
+            $('#nav').removeClass('navbar-after-scroll').addClass('navbar-no-scroll');
+            $('#team-name').removeClass('team-name-after-scroll').addClass('team-name-no-scroll');
+            $('#logo-text').html("")
+          }
+        });
+      });
+    });
+  </script>
+
+
+  <body>
+    <!-- Navbar -->
+    <nav id="nav" class="navbar navbar fixed-top navbar-expand-lg" role="navigation">
+
+      <!-- Logo and team name -->
+      <div id="logo">
+        <a class="navbar-brand" href="./index.html">
+          <img src='/res/images/logo.png' id="logo-icon" width="60" height="60" alt="PiWatcher Logo">
+          <span class="align-middle" id="logo-text"></span>
+        </a>
+      </div>
+      
+      <!-- Navbar hamburger dropdown -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <img src="/res/icons/hamburger_menu.svg" id="hamburger-icon" alt="hamburger-icon">
+      </button>
+
+      <!-- Navbar links-->
+      <class class="collapse navbar-collapse rounded-lg" id="collapsibleNavbar">
+          <class class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/project.html">Project</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/documentation.html">Documentation</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/resources.html">Resources</a>
+            </li>
+          </ul>
+        </class>
+    </nav>
+
+
+    <!-- NAU image with team name-->
+      <div class="text-center" id=background-image>
+        <img src="/res/images/NAU_Campus.jpg" class="img-fluid">
+        <div id="team-overlay">
+          <span id="team-name">PiWatcher</span>
+        </div>
+    
+
+    <!-- Card row of project overview -->
+    <div class="container-fluid">
+      <div class="row mt-4 mb-3 justify-content-center">
+
+        <!-- Project Overview -->
+        <div class="card mt-3 ml-3 mr-3 p-3 col-sm-8 col-lg-10 shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title text-center" id="overview-title">Our Project</h4>
+            <p class="card-text mt-4 mb-2" id="overview-text">
+              Welcome to the home website of project PiWatcher, a scalable and cost-effective 
+              people counting infrastructure for resource utilization monitoring and COVID-19 mitigation.  
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+    <!--Team members row-->
+
+    <div class="mt-4" id="meet-team-div">
+      <div class="m-4 text-center">
+        <h1 id="meet-team">Meet Our Team</h1>
+      </div>
+    </div>
+    
+  
+    <div class="container-fluid" id="team-row">
+      <div class="row justify-content-center">
+
+        <!-- Seth's card -->
+        <div class="container col-xs-8 col-sm-6 col-lg-3" id="team-member">
+          <div class="card p-4 m-3 shadow-sm text-center">
+            <img class="card-img-top rounded-circle img-fluid" src="/res/images/Burchfield_Headshot.jpeg" alt="Seth Burchfield">
+            <div class="card-body">
+              <h4 class="card-title">Seth Burchfield</h4>
+              <p class="card-text">snb284@nau.edu</p>
+              <p class="card-text"><b>Editor</b></p>
+              <p class="card-text"><b>Release Manager</b></p>
+              <p class="card-text"><b>Developer</b></p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Champ's card -->
+        <div class="container col-xs-8 col-sm-6 col-lg-3" id="team-member">
+          <div class="card p-4 m-3 shadow-sm text-center">
+            <img class="card-img-top rounded-circle img-fluid" src="/res/images/Foronda_Headshot.jpeg" alt="Champ Foronda">
+            <div class="card-body">
+              <h4 class="card-title">Champ Foronda</h4>
+              <p class="card-text">cf654@nau.edu</p>
+              <p class="card-text"><b>Team Lead</b></p>
+              <p class="card-text"><b>Customer Communicator</b></p>
+              <p class="card-text"><b>Developer</b></p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Joshua's card -->
+        <div class=" container col-xs-8 col-sm-6 col-lg-3" id="team-member">
+          <div class="card p-4 m-3 shadow-sm text-center">
+            <img class="card-img-top rounded-circle img-fluid" src="/res/images/Holguin_Headshot.jpeg" alt="Joshua Holguin">
+            <div class="card-body">
+              <h4 class="card-title">Joshua Holguin</h4>
+              <p class="card-text">jmh824@nau.edu</p>
+              <p class="card-text"><b>Editor</b></p>
+              <p class="card-text"><b>Release Manager</b></p>
+              <p class="card-text"><b>Developer</b></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Brigham's card -->
+        <div class=" container col-xs-8 col-sm-6 col-lg-3" id="team-member">
+          <div class="card p-4 m-3 shadow-sm text-center" >
+            <img class="card-img-top rounded-circle img-fluid" src="/res/images/Ray_Headshot.jpeg" alt="Brigham Ray">
+            <div class="card-body">
+              <h4 class="card-title">Brigham Ray</h4>
+              <p class="card-text">ber98@nau.edu</p>
+              <p class="card-text"><b>Recorder</b></p>
+              <p class="card-text"><b>Customer Communicator</b></p>
+              <p class="card-text"><b>Developer</b></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row mb-3 justify-content-center">
+  
+        <!-- Volodomyr's card -->
+        <div class="container col-xs-8 col-sm-6 col-lg-6">
+          <div class="card p-3 mt-3 mb-3 shadow-sm text-center">
+            <img class="card-img-top rounded-circle img-fluid" src="" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Volodymyr Saruta</h4>
+              <p class="card-text"><b>Technical Advisor</b></p>
+
+            </div>
+          </div>
+        </div>
+  
+        <!-- Duanes's card -->
+        <div class=" container col-xs-8 col-sm-6 col-lg-6">
+          <div class="card p-3 mt-3 mb-3 shadow-sm text-center">
+            <img class="card-img-top rounded-circle img-fluid" src="" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Duane Booher</h4>
+              <p class="card-text"><b>Client</b></p>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
