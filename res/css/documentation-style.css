@@ -1,0 +1,40 @@
+body{
+    background-color: azure;
+}
+
+.logo{
+    margin-left: 2px;
+    margin-left: 2px;
+}
+
+#logo-icon{
+    border-radius: 25%;
+}
+
+#logo-text{
+    font-size: 1.8pc;
+    color: white;
+}
+
+.nav-item {
+    font-size: 1.5pc;
+    margin-right: 25px;
+    text-align: right;
+}
+
+.nav-link{
+    color: white
+}
+
+.nav-link:hover{
+    color: gray;
+}
+
+#doc-text {
+    font-size: 2pc;
+}
+
+#pdf {
+    height: 100vh;
+    width: 100%;
+}

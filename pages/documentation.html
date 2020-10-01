@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Documentation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!-- Bootstrap stylesheet (Version 4.5.2) -->
+   <link rel="stylesheet" href="/res/css/bootstrap.css">
+
+   <!-- Custom stylesheet to override bootstrap -->
+   <link rel="stylesheet" href="/res/css/documentation-style.css">
+
+   <!-- jQuery javascript (Version 3.5.1) -->
+   <script src="/res/js/jquery-3.5.1.min.js"></script>
+
+   <!-- Bootstrap javascript (Version 4.5.2) -->
+   <script src="/res/js/bootstrap.bundle.js"></script>
+ </head>
+
+  <body>
+
+    <!-- Updates PDF viewer to selected document -->
+    <script>
+      function changePDF(pdf_name) {
+        $("#pdf").attr({
+          data: "/res/docs/".concat(pdf_name) 
+        });
+      }
+    </script>
+
+
+    <!-- Navbar -->
+    <nav id="nav" class="navbar navbar static-top navbar-expand-lg bg-dark" role="navigation">
+
+      <!-- Logo and team name -->
+      <div class="logo">
+        <a class="navbar-brand" href="/index.html">
+          <img src='/res/images/logo.png' id="logo-icon" width="60" height="60" alt="PiWatcher Logo">
+          <span class="align-middle" id="logo-text">PiWatcher</span>
+        </a>
+      </div>
+      
+      <!-- Navbar hamburger dropdown -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsible-navbar">
+        <img src="/res/icons/hamburger_menu.svg" id="hamburger-icon" alt="hamburger-icon">
+      </button>
+
+      <!-- Navbar links-->
+      <class class="collapse navbar-collapse" id="collapsible-navbar">
+          <class class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/project.html">Project</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/documentation.html">Documentation</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/resources.html">Resources</a>
+            </li>
+          </ul>
+        </class>
+    </nav>
+
+    <!-- Document selection / document row-->
+    <div class="container-fluid">
+      <div class="row">
+
+        <!-- Document selection column-->
+        <div class="col-sm-12 col-lg-3 bg-dark">
+          <table class="table table-dark table-hover">
+            <thead class="text-center" id="doc-text">
+              <tr>
+                <th scope="col">Documents</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td onclick="changePDF('Team_Standards.pdf');">Team Standards</td>
+              </tr>
+              <tr>
+                <td onclick="changePDF('Team_Inventory.pdf');">Team Inventory</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+
+        <!-- Document PDF viewer -->
+        <div class="col-sm-12 col-lg-9 mt-4 mb-4">
+          <div class="container-fluid">
+            <object id="pdf" data="/res/docs/Team_Standards.pdf" type= "application/pdf" />
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+  </body>
+</html>
