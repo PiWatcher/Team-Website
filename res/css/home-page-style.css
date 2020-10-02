@@ -1,0 +1,122 @@
+body{
+    background-color: azure;
+}
+
+#logo{
+    margin-left: 2px;
+    margin-top: 2px;
+}
+
+#logo-icon{
+    border-radius: 25%;
+}
+
+#logo-text{
+    font-size: 1.8pc;
+    color: white;
+}
+
+.nav-item {
+    font-size: 1.5pc;
+    margin-right: 25px;
+    text-align: right;
+}
+
+.nav-link{
+    color: white
+}
+
+
+.nav-link:hover{
+    color: gray;
+}
+
+.navbar-no-scroll{
+    transition-duration: 0.75s;
+}
+
+.navbar-after-scroll{
+    transition-duration: 0.5s;
+    background-color: #343a40;
+}
+
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background-color: #343a40;
+        transition-duration: 0.5s;
+    }
+}
+
+
+@media (min-width: 2400px) {
+    .navbar{
+        background-color: #343a40;
+        transition-duration: 0.5s;
+    }
+}
+
+@media (max-width: 992px) {
+    .card-img-top {
+        width: 100%;
+    }
+}
+
+
+#background-image {
+    position: relative;
+    width: 100vw;
+    height: 100vw;
+}
+
+#team-overlay {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -375%);
+}
+
+#team-name {
+    font-size: 7vw;
+    color: white;
+    text-shadow: 4px 4px black;
+}
+
+.team-name-no-scroll{
+    transition-duration: 0.5s;
+    opacity: 100%;
+}
+
+.team-name-after-scroll{
+    transition-duration: 0.25s;
+    opacity: 0%;
+}
+
+#overview-title {
+    font-size: 2.5pc;
+}
+
+#overview-text {
+    font-size: 1.3pc;
+}
+
+#meet-team {
+    font-size: 3pc;
+}
+
+#meet-team-div {
+
+    padding: 5px;
+    display: inline-block;
+}
+
+#team-row {
+    max-width: 80vw;
+    max-height: auto;
+}
+
+@media (min-width: 1400px) {
+    #team-member {
+        max-width: 500px;
+        max-height: auto;
+    }
+}
