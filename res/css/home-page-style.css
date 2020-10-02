@@ -48,7 +48,7 @@ body{
 }
 
 
-@media (min-width: 2000px) {
+@media (min-width: 2400px) {
     .navbar{
         background-color: #292b2c;
         transition-duration: 0.5s;
