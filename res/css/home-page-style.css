@@ -37,12 +37,12 @@ body{
 
 .navbar-after-scroll{
     transition-duration: 0.5s;
-    background-color: #292b2c;
+    background-color: #343a40;
 }
 
 @media (max-width: 992px) {
     .navbar-collapse {
-        background-color: #292b2c;
+        background-color: #343a40;
         transition-duration: 0.5s;
     }
 }
@@ -50,7 +50,7 @@ body{
 
 @media (min-width: 2400px) {
     .navbar{
-        background-color: #292b2c;
+        background-color: #343a40;
         transition-duration: 0.5s;
     }
 }
