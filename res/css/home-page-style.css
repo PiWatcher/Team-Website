@@ -47,7 +47,6 @@ body{
     }
 }
 
-
 @media (min-width: 2400px) {
     .navbar{
         background-color: #343a40;
@@ -61,7 +60,6 @@ body{
     }
 }
 
-
 #background-image {
     position: relative;
     width: 100vw;
@@ -73,6 +71,24 @@ body{
     top:50%;
     left: 50%;
     transform: translate(-50%, -375%);
+}
+
+#click-down {
+    position: absolute;
+    background-color:  #343a40;
+    border-style: solid;
+    border-color: white;
+    top: 50%;
+    left: 49%;
+    width: 150px;
+    height: 60px;
+    transform: translate(-50%, -100%);
+}
+
+@media (max-width: 992px) {
+    #click-down {
+        opacity: 0%;
+    }
 }
 
 #team-name {
