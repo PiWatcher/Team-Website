@@ -32,6 +32,16 @@
           data: "../res/docs/".concat(pdf_name) 
         });
       }
+
+      function changeVid(pdf_name) {
+        $("#pdf-link").attr({
+          href: "../res/docs/".concat(pdf_name) 
+        });
+
+        $("#pdf-embed").attr({
+          data: "../res/docs/".concat(pdf_name) 
+        });
+      }
     </script>
 
 
@@ -83,7 +93,7 @@
           <table class="table table-dark table-hover">
             <thead class="text-center" id="doc-text">
               <tr>
-                <th scope="col">Documents</th>
+                <th scope="col">Documentation</th>
               </tr>
             </thead>
             <tbody>
@@ -96,6 +106,9 @@
               <tr>
                 <td onclick="changePDF('Technological_Feasibility.pdf');">Technological Feasibility</td>
               </tr>
+              <tr>
+                <td onclick="window.location='https://www.youtube.com/watch?v=QloHhx70pxs'">Design Review 1 (Video)</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -105,7 +118,7 @@
         <div class="container-fluid col-sm-12 col-lg-9 mt-3 mb-4">
           <div class="container-fluid text-center">
             <button class="rounded-lg p-2 mb-3" id="pdf-button">
-               <a id="pdf-link" href="../res/docs/Team_Standards.pdf" type="application/pdf">Download PDF</a>
+               <a id="pdf-link" href="../res/docs/Team_Standards.pdf" type="application/pdf">Download</a>
             </button>
             <object id="pdf-embed" data="../res/docs/Team_Standards.pdf" type="application/pdf"></object>
           </div>
