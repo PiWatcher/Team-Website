@@ -32,16 +32,6 @@
           data: "../res/docs/".concat(pdf_name) 
         });
       }
-
-      function changeVid(pdf_name) {
-        $("#pdf-link").attr({
-          href: "../res/docs/".concat(pdf_name) 
-        });
-
-        $("#pdf-embed").attr({
-          data: "../res/docs/".concat(pdf_name) 
-        });
-      }
     </script>
 
 
@@ -102,6 +92,9 @@
               </tr>
               <tr>
                 <td onclick="changePDF('Team_Inventory.pdf');">Team Inventory</td>
+              </tr>
+              <tr>
+                <td onclick="window.location='https://www.youtube.com/watch?v=BjcaGO2LHHc'">Mini Intro (Video)</td>
               </tr>
               <tr>
                 <td onclick="changePDF('Technological_Feasibility.pdf');">Technological Feasibility</td>
