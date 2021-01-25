@@ -86,15 +86,23 @@ body {
    }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 560px) {
    #team-name {
-      font-size: 2em;
+      font-size: 2.5em;
       color: white;
       text-shadow: 2px 2px black;
    }
 }
 
-@media (min-width: 541px) {
+@media (min-width: 561px) {
+   #team-name {
+      font-size: 4.5em;
+      color: white;
+      text-shadow: 2px 2px black;
+   }
+}
+
+@media (min-width: 975px) {
    #team-name {
       font-size: 8em;
       color: white;
