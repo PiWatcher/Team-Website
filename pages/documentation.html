@@ -41,7 +41,7 @@
     <!-- Logo and team name -->
     <div id="logo">
       <a class="navbar-brand" href="../index.html">
-        <img src='../res/images/logo.png' id="logo-icon" width="60" height="60" alt="PiWatcher Logo">
+        <img src='../res/images/PiWatcher_Logo.png' id="logo-icon" width="60" height="60" alt="PiWatcher Logo">
         <span class="align-middle" id="logo-text">PiWatcher</span>
       </a>
     </div>
@@ -111,6 +111,19 @@
             <tr>
               <td onclick="window.location='https://www.youtube.com/watch?v=4-qAzC1x3EE'">Design Review 2 (Video)</td>
             </tr>
+            <tr>
+              <td onclick="changePDF('Software_Testing.pdf');">Software Testing</td>
+            </tr>
+            <tr>
+              <td onclick="window.location='https://www.youtube.com/watch?v=37KOa3GdC10'">Design Review 3 (Video)</td>
+            </tr>
+            <tr>
+              <td onclick="window.location='https://www.youtube.com/watch?v=9T863_Bxa1E'">Capstone Presentation (Video)
+              </td>
+            </tr>
+            <tr>
+              <td onclick="changePDF('Capstone_Poster.pdf');">Capstone Poster</td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -119,9 +132,9 @@
       <!-- Document PDF viewer -->
       <div class="container-fluid col-sm-12 col-lg-9 mt-3 mb-4">
         <div class="container-fluid text-center">
-          <button class="rounded-lg p-2 mb-3" id="pdf-button">
-            <a id="pdf-link" href="../res/docs/Team_Standards.pdf" type="application/pdf">Download</a>
-          </button>
+          <a id="pdf-link" href="../res/docs/Team_Standards.pdf" type="application/pdf">
+            <button class="rounded-lg p-2 mb-3" id="pdf-button">Download</button>
+          </a>
           <object id="pdf-embed" data="../res/docs/Team_Standards.pdf" type="application/pdf"></object>
         </div>
       </div>
