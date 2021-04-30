@@ -1,5 +1,10 @@
 body {
    background-color: azure;
+   font-family: "Open Sans", sans-serif;
+}
+
+td {
+   font-weight: 500;
 }
 
 #logo {
@@ -43,13 +48,10 @@ body {
 #pdf-button {
    background-color: #343a40;
    border: none;
-}
-
-#pdf-link {
    color: white;
 }
 
-#pdf-link:hover {
+#pdf-button:hover {
    color: gray;
    text-decoration: none;
 }

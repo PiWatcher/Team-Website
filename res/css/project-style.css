@@ -1,11 +1,24 @@
-.col-lg {
-  width: 75%;
+body {
+    font-family: "Open Sans", sans-serif;
 }
 
-.col-xl{
-  width: 75%;
+p {
+  font-weight: 500;
+
+  font-size: 1.25em;
 }
 
-.container-fluid {
-  line-height: 34px;
+.image-div {
+  display: block;
+  margin: 0 auto;
 }
+
+@media only screen and (min-width: 992px) {
+  .project-image {
+    width: 980px;
+  }
+
+  .solution-image {
+    height: 560px;
+  }
+} 

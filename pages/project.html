@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Team PiWatcher</title>
+  <title>Project Information</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -29,7 +29,7 @@
     <!-- Logo and team name -->
     <div id="logo">
       <a class="navbar-brand" href="../index.html">
-        <img src='../res/images/logo.png' id="logo-icon" width="60" height="60" alt="PiWatcher Logo">
+        <img src='../res/images/PiWatcher_Logo.png' id="logo-icon" width="60" height="60" alt="PiWatcher Logo">
         <span class="align-middle" id="logo-text">PiWatcher</span>
       </a>
     </div>
@@ -63,71 +63,78 @@
   </nav>
 
   <div class="container-fluid text-center col-sm-10 col-lg-8">
-    <div class="row justify-content-center mt-4">
-      <div class="col">
-        <div class="card">
-          <div class="card-body">
-            <h1 class="text-center font-weight-bold ">
-              Project Description
-            </h1>
-            <p class="text-justify font-weight-bold m-2 mt-5">
-              The pandemic is a time of unprecedented personal and social reflection. It has not only affected our
-              personal lives, it has also affected how we utilize technology at school and in the workplace. It’s become
-              necessary to keep track of population density as people move throughout public spaces.
-              One way that this can be implemented is through a people counting infrastructure. The Piwatcher team is
-              tasked with providing NAU an inexpensive, scalable people counting device. This particular device will be
-              networked and accessible across campus.
-              The device, because of its capabilities, will provide administrators with data that can be used outside of
-              the context of a pandemic. Because the counter is scalable and is restricted only to funding, a network of
-              hundreds of people counters would allow NAU to analyze trends regarding the use of campus spaces.
-            </p>
-            <img src="../res/images/covid.png" class="mt-2 img-fluid">
-          </div>
+    <div class="justify-content-center mt-4">
+
+      <div class="card">
+        <div class="card-body">
+          <h1 class="text-center font-weight-bold">
+            Project Description
+          </h1>
+          <p class="text-justify m-2 mt-5">
+            As technology advances and small IoT devices become commonplace in the world around us, the
+            term “smart”
+            has been shifting alongside.
+            The PiWatcher team was tasked with providing Northern Arizona University with an inexpensive, scalable
+            people-counting infrastructure.
+            This infrastructure provides a networked system between IoT devices and a full-stack web application for
+            monitoring room usage across campus.
+            Due to our system being more cost-effective than the one in current use, it can be deployed in larger
+            quantities
+            and provide our client the ability to further his vision of a “smart campus.”
+          </p>
+          <a href="../res/images/Problem_Diagram.png">
+            <img class="mt-4 mb-3 shadow-sm img-fluid project-image rounded" src="../res/images/Problem_Diagram.png"
+              alt="Problem Diagram">
+          </a>
         </div>
       </div>
     </div>
-    <div class="row justify-content-center mt-4">
-      <div class="col">
-        <div class=card>
-          <div class="card-body">
-            <h1 class="text-center font-weight-bold">
-              Requirements and Solution
-            </h1>
-            <p class="text-justify font-weight-bold m-2 mt-5">
-              A solution of this scope has many different aspects. A front end service will provide administrators of
-              the people counting infrastructure access to each and every one of the people counting devices.
-              Ideally, administrators will have the ability to access the number of people at any given location of a
-              particular device at any given time, and analyze trends across the whole network of deployed people
-              counting devices.
-              A database will store the events recorded by these devices as they come, realtime, which events are:
-              “person entering the space” and “person leaving the space.” This database will act as the endpoint of the
-              front end service for administrators who might want to access the campus-wide people counting data.
-              There will of course be a back end service allowing the front end and database to communicate effectively.
-            </p>
-            <img src="../res/images/solution.png" class="mt-2 img-fluid">
-          </div>
+
+    <div class="justify-content-center mt-4">
+
+      <div class=card>
+        <div class="card-body">
+          <h1 class="text-center font-weight-bold">
+            Requirements and Solution
+          </h1>
+          <p class="text-justify m-2 mt-5">
+            The solution presented by our team encompasses an IoT device used for image processing and counting as
+            well as a full-stack web application with an accompanying database for user interaction and data digest.
+            The IoT device utilizes machine learning to take and process an image, all on the device, and send the
+            number of people recognized within the frame to the web application.
+            The backend portion of our web application handles data insertion after being sent the latest count and
+            data collection when requested from our frontend for display. The role-based account system within the
+            application designates the data viewing permissions on a per-user basis. PiWatcher provides an
+            all-inclusive package for monitoring footfall in a desired location.
+          </p>
+          <a href="../res/images/Solution_Diagram.png">
+            <img class="mt-4 mb-3 shadow-sm rounded solution-image img-fluid" src="../res/images/Solution_Diagram.png"
+              alt="Solution Diagram">
+          </a>
         </div>
       </div>
     </div>
-    <div class="row justify-content-center mt-4 mb-4">
-      <div class="col">
-        <div class=card>
-          <div class="card-body">
-            <h1 class="text-center font-weight-bold">
-              Technologies
-            </h1>
-            <p class="text-justify font-weight-bold m-2 mt-5">
-              This software will run on the Raspberry Pi 3 B+ and Pi Camera which are both very affordable and scalable.
-              Front end libraries like bootstrap and jquery can provide a seamless desktop and mobile compatible website
-              for the administrators of the people counting infrastructure.
-              Flask and Django may act as the back end service for the front end to communicate with either a MongoDB or
-              MySQL database. You’ll be able to find more about these technologies in the Documentation tab. Github and
-              Google Calendar will be used to streamline the entire development process.
-              You can access both our source code and calendar on the resources portion of this website, both of which
-              will be updated frequently.
-            </p>
-            <img src="../res/images/pi.png" class="mt-2 img-fluid">
-          </div>
+
+    <div class="justify-content-center mt-4 mb-5">
+      <div class=card>
+        <div class="card-body">
+          <h1 class="text-center font-weight-bold">
+            Technologies
+          </h1>
+          <p class="text-justify m-2 mt-5">
+            Our people detection system employs OpenCV and TensorFlow which run on a Raspberry Pi 4 with a Pi Camera.
+            The web
+            application back end is built with Flask which connects to our database, MongoDB, to store data. On the
+            front end, we use React to provide a modular and responsive analytics dashboard. More information
+            about
+            the technologies we used lies on our <a href="documentation.html">documentation</a> page.
+            Our source code and development schedule can be accessed on the <a href="resources.html">resources</a> page
+            of our website.
+          </p>
+
+          <a href="../res/images/Pi_Diagram.png">
+            <img class="mt-4 mb-3 shadow-sm rounded img-fluid" src="../res/images/Pi_Diagram.png" alt="Pi Diagram">
+          </a>
         </div>
       </div>
     </div>

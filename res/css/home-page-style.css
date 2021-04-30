@@ -1,5 +1,10 @@
 body {
    background-color: azure;
+   font-family: "Open Sans", sans-serif;
+}
+
+p {
+ font-weight: 500;
 }
 
 #logo {
@@ -65,27 +70,6 @@ body {
    transform: translate(-50%, -50%);
 }
 
-#click-down {
-   position: absolute;
-   top: 90%;
-   left: 50%;
-   width: 80px;
-   height: 55px;
-   transform: translate(-50%, -50%);
-   filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 1));
-}
-
-#click-down:hover {
-   background-color: #343a40;
-   transition-duration: 0.5s;
-}
-
-@media (max-width: 992px) {
-   #click-down {
-      opacity: 0%;
-   }
-}
-
 @media (max-width: 560px) {
    #team-name {
       font-size: 2.5em;
@@ -125,7 +109,7 @@ body {
 }
 
 #overview-text {
-   font-size: 1.3pc;
+   font-size: 1.25em;
 }
 
 #meet-team {
@@ -146,8 +130,19 @@ body {
    max-width: 400px;
 }
 
+
+#team-card {
+   width: 400px;
+}
+
 #our-team {
    max-width: 1200px;
+}
+
+#headshot {
+   height: 288px;
+   width: 288px;
+   margin: 0 auto;
 }
 
 
@@ -158,5 +153,13 @@ body {
 
    .brig-card {
       margin-right: 8px;
+   }
+
+   .vova-card {
+      margin-right: 8px;
+   }
+
+   .duane-card {
+      margin-left: 8px;
    }
 }
