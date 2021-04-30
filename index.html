@@ -40,18 +40,6 @@
   });
 </script>
 
-
-<!-- Click down arrow animation -->
-<script>
-  $(document).ready(function () {
-    $("div.scrollLink").click(function (event) {
-      event.preventDefault();
-      $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top - 100 }, 600);
-    });
-  });
-</script>
-
-
 <body>
   <!-- Navbar -->
   <nav id="nav" class="navbar navbar fixed-top navbar-expand-lg" role="navigation">
@@ -59,7 +47,7 @@
     <!-- Logo and team name -->
     <div id="logo">
       <a class="navbar-brand" href="./index.html">
-        <img src='res/images/logo.png' id="logo-icon" width="60" height="60" alt="PiWatcher Logo">
+        <img src='res/images/PiWatcher_Logo.png' id="logo-icon" width="60" height="60" alt="PiWatcher Logo">
         <span class="align-middle" id="logo-text"></span>
       </a>
     </div>
@@ -95,12 +83,9 @@
 
   <!-- NAU image with team name-->
   <div class="text-center" id=background-image>
-    <img src="res/images/NAU_Campus.jpg" class="img-fluid">
+    <img src="res/images/NAU_Campus.jpg" class="img-fluid" alt="NAU Campus">
     <div id="team-overlay">
       <div id="team-name">PiWatcher</div>
-    </div>
-    <div class="scrollLink rounded-lg" id="click-down" href="#top-page">
-      <img src="res/icons/down_arrow.svg" width="60px" height="55px"></img>
     </div>
   </div>
 
@@ -112,10 +97,11 @@
       <!-- Project Overview -->
       <div class="card mt-3 ml-4 mr-4 p-3 col-sm-8 col-lg-10 shadow-sm" id="our-team">
         <div class="card-body">
-          <h4 class="card-title text-center" id="overview-title">Our Project</h4>
+          <h4 class="card-title text-center font-weight-bold" id="overview-title">Our Project</h4>
           <p class="card-text mt-4 mb-2 text-justify" id="overview-text">
-            Welcome to the home website of project PiWatcher, a scalable and cost-effective
-            people counting infrastructure for resource utilization monitoring and COVID-19 mitigation.
+            Welcome to the home website of project PiWatcher. Inspired by the COVID-19 pandemic, this project aims to
+            create a scalable and cost-effective
+            people counting infrastructure for monitoring footfall and resource utilization.
           </p>
         </div>
       </div>
@@ -124,9 +110,8 @@
 
 
   <!--Team members row-->
-
   <div class="container-fluid mt-4" id="meet-team-div">
-    <h1 id="meet-team">Meet Our Team</h1>
+    <h1 class="font-weight-bold" id="meet-team">Meet Our Team</h1>
   </div>
 
 
@@ -136,7 +121,7 @@
       <!-- Seth's card -->
       <div class="container col-xs-8 col-sm-6 col-lg-4" id="team-member">
         <div class="card p-4 m-3 shadow-sm text-center">
-          <img class="card-img-top rounded-circle img-fluid" src="res/images/Burchfield_Headshot.jpeg"
+          <img class="card-img-top rounded-circle img-fluid" id="headshot" src="res/images/Burchfield_Headshot.jpeg"
             alt="Seth Burchfield">
           <div class="card-body">
             <h4 class="card-title">Seth Burchfield</h4>
@@ -151,7 +136,8 @@
       <!-- Champ's card -->
       <div class="container col-xs-8 col-sm-6 col-lg-4" id="team-member">
         <div class="card p-4 m-3 shadow-sm text-center">
-          <img class="card-img-top rounded-circle img-fluid" src="res/images/Foronda_Headshot.jpeg" alt="Champ Foronda">
+          <img class="card-img-top rounded-circle img-fluid" id="headshot" src="res/images/Foronda_Headshot.jpeg"
+            alt="Champ Foronda">
           <div class="card-body">
             <h4 class="card-title">Champ Foronda</h4>
             <p class="card-text">cf654@nau.edu</p>
@@ -165,7 +151,7 @@
       <!-- Joshua's card -->
       <div class=" container col-xs-8 col-sm-6 col-lg-4" id="team-member">
         <div class="card p-4 m-3 shadow-sm text-center">
-          <img class="card-img-top rounded-circle img-fluid" src="res/images/Holguin_Headshot.jpeg"
+          <img class="card-img-top rounded-circle img-fluid" id="headshot" src="res/images/Holguin_Headshot.jpeg"
             alt="Joshua Holguin">
           <div class="card-body">
             <h4 class="card-title">Joshua Holguin</h4>
@@ -180,7 +166,8 @@
       <!-- Brigham's card -->
       <div class=" container col-xs-8 col-sm-6 col-lg-4 brig-card" id="team-member">
         <div class="card p-4 m-3 shadow-sm text-center">
-          <img class="card-img-top rounded-circle img-fluid" src="res/images/Ray_Headshot.jpeg" alt="Brigham Ray">
+          <img class="card-img-top rounded-circle img-fluid" id="headshot" src="res/images/Ray_Headshot.jpeg"
+            alt="Brigham Ray">
           <div class="card-body">
             <h4 class="card-title">Brigham Ray</h4>
             <p class="card-text">ber98@nau.edu</p>
@@ -194,7 +181,8 @@
       <!-- Brandon's card -->
       <div class=" container col-xs-8 col-sm-6 col-lg-4 brand-card" id="team-member">
         <div class="card p-4 m-3 shadow-sm text-center">
-          <img class="card-img-top rounded-circle img-fluid" src="res/images/Thomas_Headshot.png" alt="Brandon Thomas">
+          <img class="card-img-top rounded-circle img-fluid" id="headshot" src="res/images/Thomas_Headshot.png"
+            alt="Brandon Thomas">
           <div class="card-body">
             <h4 class="card-title">Brandon Thomas</h4>
             <p class="card-text">bct24@nau.edu</p>
@@ -206,34 +194,34 @@
       </div>
     </div>
 
-    <div class="container-fluid">
-      <div class="row mb-4 justify-content-center">
 
-        <!-- Volodomyr's card -->
-        <div class="container col-xs-8 col-sm-6 col-lg-6">
-          <div class="card p-3 mt-3 mb-3 shadow-sm text-center">
-            <img class="card-img-top rounded-circle img-fluid" src="" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Volodymyr Saruta</h4>
-              <p class="card-text"><b>Technical Advisor</b></p>
+    <div class="row mb-4 justify-content-center">
+      <!-- Volodomyr's card -->
+      <div class="container col-xs-8 col-sm-6 col-lg-4 vova-card" id="team-member">
+        <div class="card p-4 m-3 shadow-sm text-center">
+          <img class="card-img-top rounded-circle img-fluid" id="headshot" src="res/images/Saruta_Headshot.png"
+            alt="Volodymyr Saruta">
+          <div class="card-body">
+            <h4 class="card-title">Volodymyr Saruta</h4>
+            <p class="card-text"><b>Team Mentor</b></p>
 
-            </div>
           </div>
         </div>
+      </div>
 
-        <!-- Duanes's card -->
-        <div class=" container col-xs-8 col-sm-6 col-lg-6">
-          <div class="card p-3 mt-3 mb-3 shadow-sm text-center">
-            <img class="card-img-top rounded-circle img-fluid" src="" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Duane Booher</h4>
-              <p class="card-text"><b>Client</b></p>
-            </div>
+      <!-- Duanes's card -->
+      <div class=" container col-xs-8 col-sm-6 col-lg-4 duane-card" id="team-member">
+        <div class="card p-4 m-3 shadow-sm text-center">
+          <img class="card-img-top rounded-circle img-fluid" id="headshot" src="res/images/Booher_Headshot.jpg"
+            alt="Duane Booher">
+          <div class="card-body">
+            <h4 class="card-title">Duane Booher</h4>
+            <p class="card-text"><b>Client</b></p>
           </div>
         </div>
-
       </div>
     </div>
+  </div>
   </div>
 </body>
 
